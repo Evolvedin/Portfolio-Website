@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background-color: #121212;
+    line-height: 1.6;
+    margin: 0;
+    padding: 60px 0;
+    /* Adjust for fixed navbar and footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0 0 1rem 0;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #9b5de5;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background-color: #f15bb5;
+    color: #ffffff;
+}
+
+/* Main Content Styling for Consistency */
+main,
+.logo-container,
+.about-main,
+.contact-form-container,
+#featured-projects {
+    padding: 20px;
+    text-align: center;
+    /* Center content */
+}
+
+/* Specific Styles for About, Contact, and Projects Section */
+.about-section,
+.contact-form-container {
+    background-color: #222;
+    margin: 20px auto;
+    /* Centering and adding spacing */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    /* Uniform width for these sections */
+}
+
+.projects-container,
+#featured-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-item,
+.project {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: calc(50% - 10px);
+    /* Adjust based on gap, responsive */
+}
+
+.project-item img,
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Button Styles for Interaction */
+.btn {
+    display: inline-block;
+    background: #9b5de5;
+    color: #ffffff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f15bb5;
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #333;
+    color: #9b5de5;
+    width: 100%;
+    margin-top: auto;
+    /* Ensures footer is at the bottom */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .project-item,
+    .project,
+    .contact-form-container,
+    #featured-projects {
+        width: 100%;
+        /* Full width for smaller screens */
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+        padding: 0 10px;
+        /* Adjust padding for small screens */
+    }
+}
+
+.contact-form-container {
+    background-color: #222;
+    /* Dark theme background for the form area */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    /* Aligns with the uniform width for sections */
+    text-align: left;
+    /* Aligns form labels and inputs for readability */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Spacing between form elements */
+}
+
+.contact-form label {
+    color: #ddd;
+    /* Lighter text for readability */
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    /* Space between label and input */
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    background-color: #9b5de5;
+    /* Theme color for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #f15bb5;
+    /* Highlight effect on hover */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Space between social icons */
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #9b5de5;
+    /* Theme color for icons */
+    font-size: 24px;
+    /* Icon size */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f15bb5;
+    /* Highlight effect on hover */
+}
+.logo {
+    width: 450px;
+    height: 250px;
+}
